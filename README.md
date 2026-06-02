@@ -41,6 +41,13 @@ New-Item -ItemType Directory -Force -Path "$HOME\.claude\skills"
 Copy-Item -Recurse -Force ".\skills\explain-feature" "$HOME\.claude\skills\"
 ```
 
+Windows Command Prompt:
+
+```cmd
+mkdir %USERPROFILE%\.claude\skills
+xcopy /E /I skills\explain-feature %USERPROFILE%\.claude\skills\explain-feature
+```
+
 Restart Claude Code after copying the skill.
 
 ### Plugin validation
