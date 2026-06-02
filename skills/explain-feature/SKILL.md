@@ -1,7 +1,7 @@
 ---
 name: explain-feature
 description: Explain features, merge requests, pull requests, tickets, architecture changes, bug fixes, and code snippets to non-technical stakeholders.
-argument-hint: "[audience] [Basic|Detailed|Executive Summary] [feature, ticket, MR, PR, code, or context]"
+argument-hint: "[audience] [Basic|Balanced|Detailed|Executive Summary] [feature, ticket, MR, PR, code, or context]"
 ---
 
 # Explain Feature
@@ -51,10 +51,11 @@ Adapt wording to the intended audience. If no audience is provided, use a balanc
 Support these levels:
 
 - Basic: shorter explanation, simplest language, one analogy if useful, minimal technical terms.
+- Balanced: detailed enough for stakeholders, but avoid very long explanations unless the user asks for Detailed. Keep each section short, use one paragraph per section, and only add a glossary if needed.
 - Detailed: full explanation with context, assumptions, impact, risks, glossary, and practical example.
 - Executive Summary: compact, business-oriented version. Keep the required section headings but make each section brief.
 
-If no complexity is provided, use Detailed.
+If no complexity is provided, use Balanced: detailed enough for stakeholders, but avoid very long explanations unless the user asks for Detailed.
 
 ## Required output sections
 
@@ -62,7 +63,7 @@ Always produce these sections in this order:
 
 ### 1. What is this feature?
 
-Explain what was built or changed. Use one to three paragraphs depending on the complexity level.
+Explain what was built or changed. For Balanced, use one short paragraph. For Detailed, use one to three paragraphs depending on the complexity of the work.
 
 ### 2. Why do we need it?
 

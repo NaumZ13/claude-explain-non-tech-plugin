@@ -9,7 +9,7 @@ It turns features, merge requests, pull requests, tickets, architecture changes,
 - A Claude Code skill: `explain-feature`
 - A slash command file: `commands/explain-feature.md`
 - Audience-aware explanations for clients, Product Managers, executives, marketing, QA, support, sales, and managers
-- Complexity levels: Basic, Detailed, and Executive Summary
+- Complexity levels: Basic, Balanced, Detailed, and Executive Summary
 - Merge Request and Ticket modes
 - Plain-language analogies
 - Technical glossary support for terms like JWT, cache, API, queue, and database
@@ -40,7 +40,7 @@ claude plugin validate . --strict
 Claude Code namespaces plugin skills by plugin name. In plugin mode, invoke the skill as:
 
 ```text
-/explain-non-tech:explain-feature audience=Product Manager complexity=Detailed
+/explain-non-tech:explain-feature audience=Product Manager complexity=Balanced
 ```
 
 Then paste a feature description, MR, PR, ticket, architecture note, bug fix, or code snippet.
@@ -123,6 +123,8 @@ The skill always generates:
 Merge Request mode also adds a technical summary, non-technical summary, business impact, and risks.
 
 Ticket mode also adds a requirement summary, user impact, and expected outcome.
+
+If no complexity is provided, the skill uses `Balanced` by default. Balanced keeps each section short, uses one paragraph per section, and only adds a glossary when technical terms are needed.
 
 ## Future roadmap
 

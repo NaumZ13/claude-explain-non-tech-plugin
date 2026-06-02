@@ -1,6 +1,6 @@
 ---
 description: Explain a feature, merge request, pull request, ticket, architecture change, bug fix, or code snippet for non-technical stakeholders.
-argument-hint: "[audience] [Basic|Detailed|Executive Summary] [context]"
+argument-hint: "[audience] [Basic|Balanced|Detailed|Executive Summary] [context]"
 ---
 
 Use the `explain-feature` skill from this plugin to explain the provided context for non-technical stakeholders.
