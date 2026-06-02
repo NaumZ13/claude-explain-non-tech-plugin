@@ -1,6 +1,6 @@
 ---
 name: explain-feature
-description: Explain features, merge requests, pull requests, tickets, architecture changes, bug fixes, and code snippets to non-technical stakeholders. Use when explaining features, reviewing MRs or PRs, creating Notion documentation, or communicating with clients, product managers, executives, marketing, managers, sales, QA, or customer support.
+description: Explain features, merge requests, pull requests, tickets, architecture changes, bug fixes, and code snippets to non-technical stakeholders.
 argument-hint: "[audience] [Basic|Detailed|Executive Summary] [feature, ticket, MR, PR, code, or context]"
 ---
 
