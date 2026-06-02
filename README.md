@@ -4,6 +4,12 @@
 
 It turns features, merge requests, pull requests, tickets, architecture changes, bug fixes, and code snippets into clear documentation for Product Managers, clients, executives, marketing, managers, sales, QA, and customer support.
 
+## Why this plugin exists
+
+Developers constantly need to explain technical work to stakeholders.
+
+Claude can already explain code, but the format often changes from conversation to conversation. This plugin provides a repeatable structure that generates stakeholder-ready explanations for features, merge requests, tickets, architecture changes, and bug fixes.
+
 ## What it provides
 
 - A Claude Code skill: `explain-feature`
@@ -17,19 +23,29 @@ It turns features, merge requests, pull requests, tickets, architecture changes,
 
 ## Installation
 
-Clone or copy this plugin directory, then load it locally with Claude Code:
+### Local skill installation
+
+Clone this repository, then copy the skill into your Claude Code skills directory.
+
+macOS/Linux:
 
 ```bash
-claude --plugin-dir .
+mkdir -p ~/.claude/skills
+cp -R skills/explain-feature ~/.claude/skills/
 ```
 
-If you are launching Claude Code from a parent directory:
+Windows PowerShell:
 
-```bash
-claude --plugin-dir ./explain-non-tech
+```powershell
+New-Item -ItemType Directory -Force -Path "$HOME\.claude\skills"
+Copy-Item -Recurse -Force ".\skills\explain-feature" "$HOME\.claude\skills\"
 ```
 
-Validate the plugin before publishing or sharing:
+Restart Claude Code after copying the skill.
+
+### Plugin validation
+
+This repository is structured as a Claude Code plugin. Before publishing or sharing it as a plugin, validate the manifest with your installed Claude Code CLI:
 
 ```bash
 claude plugin validate . --strict
@@ -37,18 +53,30 @@ claude plugin validate . --strict
 
 ## Usage
 
-Claude Code namespaces plugin skills by plugin name. In plugin mode, invoke the skill as:
+After local skill installation, ask Claude Code to use the `explain-feature` skill:
 
 ```text
-/explain-non-tech:explain-feature audience=Product Manager complexity=Balanced
+Use the explain-feature skill to explain this for non-technical stakeholders.
 ```
 
 Then paste a feature description, MR, PR, ticket, architecture note, bug fix, or code snippet.
 
-This repository also includes `commands/explain-feature.md` for teams that copy the command into a standalone `.claude/commands/` setup, where it can be invoked as:
+You can also specify audience and complexity:
 
 ```text
-/explain-feature audience=Client complexity=Basic
+Use the explain-feature skill. audience=Client complexity=Basic
+```
+
+When installed as a namespaced plugin, invoke it as:
+
+```text
+/explain-non-tech:explain-feature complexity=Detailed
+```
+
+This repository also includes `commands/explain-feature.md` for teams that copy the command into a standalone `.claude/commands/` setup:
+
+```text
+/explain-feature complexity=Basic
 ```
 
 ## Examples
@@ -79,6 +107,44 @@ See the example files:
 - `examples/feature-example.md`
 - `examples/bugfix-example.md`
 - `examples/mr-example.md`
+
+## Example output
+
+### 1. What is this feature?
+
+This feature allows the product to detect when a visitor rejects cookies and automatically turn off personalization that depends on consent.
+
+### 2. Why do we need it?
+
+It helps the business respect privacy choices while still keeping the website usable for visitors who do not accept optional cookies.
+
+### 3. What problem does it solve?
+
+Without this, the site might continue using personalization behavior after a visitor has declined cookies, which could create compliance and trust concerns.
+
+### 4. How does it work?
+
+When a visitor makes a cookie choice, the system checks that preference before enabling personalization. Think of it like checking a guest list before giving someone access to a private room.
+
+### 5. What changes for the user?
+
+Visitors who reject optional cookies still see the website, but personalization features that rely on those cookies are disabled.
+
+### 6. What remains unchanged?
+
+Required website functionality stays available, and visitors who accept cookies can still receive the personalized experience.
+
+### 7. Risks and edge cases
+
+Legal or compliance teams should confirm the exact consent requirements for each region. QA should test both accepted and rejected cookie states.
+
+### 8. Real-world example
+
+A visitor declines marketing cookies. The site remembers that choice and avoids showing personalization that depends on those cookies.
+
+### 9. Non-technical summary
+
+This change helps the product respect cookie consent choices while keeping the website experience stable and understandable.
 
 ## Screenshots
 
