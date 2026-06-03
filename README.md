@@ -190,13 +190,3 @@ Merge Request mode also adds a technical summary, non-technical summary, busines
 Ticket mode also adds a requirement summary, user impact, and expected outcome.
 
 If no complexity is provided, the skill uses `Balanced` by default. Balanced keeps each section short, uses one paragraph per section, and only adds a glossary when technical terms are needed.
-
-## Future roadmap
-
-- Notion-specific output templates
-- Release note mode
-- Customer support macro mode
-- Sales enablement mode
-- Localization presets for multilingual stakeholder updates
-- Optional repository-aware examples generated from real diffs
-- Screenshot and diagram prompt templates
