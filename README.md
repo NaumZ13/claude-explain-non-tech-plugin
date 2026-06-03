@@ -153,14 +153,6 @@ A visitor declines marketing cookies. The site remembers that choice and avoids 
 
 This change helps the product respect cookie consent choices while keeping the website experience stable and understandable.
 
-## Screenshots
-
-Place screenshots here when publishing:
-
-- `docs/screenshots/plugin-list.png` - Plugin visible in Claude Code
-- `docs/screenshots/explain-feature-command.png` - Command invocation example
-- `docs/screenshots/notion-output.png` - Example explanation pasted into Notion
-
 ## Plugin structure
 
 ```text
