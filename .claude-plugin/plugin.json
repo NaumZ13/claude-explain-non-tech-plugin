@@ -2,6 +2,10 @@
   "name": "explain-non-tech",
   "version": "1.0.0",
   "description": "Explain technical features and code changes to non-technical stakeholders.",
+  "author": {
+    "name": "NaumZ13"
+  },
+  "repository": "https://github.com/NaumZ13/claude-explain-non-tech-plugin",
   "keywords": [
     "communication",
     "documentation",
