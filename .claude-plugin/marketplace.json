@@ -1,0 +1,21 @@
+{
+  "name": "naumz-plugins",
+  "owner": {
+    "name": "NaumZ13"
+  },
+  "description": "Claude Code plugins by NaumZ13.",
+  "plugins": [
+    {
+      "name": "explain-non-tech",
+      "source": {
+        "source": "github",
+        "repo": "NaumZ13/claude-explain-non-tech-plugin"
+      },
+      "description": "Explain technical features and code changes to non-technical stakeholders.",
+      "version": "1.0.0",
+      "author": {
+        "name": "NaumZ13"
+      }
+    }
+  ]
+}
