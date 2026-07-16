@@ -190,3 +190,11 @@ Merge Request mode also adds a technical summary, non-technical summary, busines
 Ticket mode also adds a requirement summary, user impact, and expected outcome.
 
 If no complexity is provided, the skill uses `Balanced` by default. Balanced keeps each section short, uses one paragraph per section, and only adds a glossary when technical terms are needed.
+
+## Privacy
+
+This plugin does not collect, transmit, store, or process user data outside of the local Claude Code session. It only provides prompt instructions and examples for explaining technical work.
+
+## License
+
+MIT License. See `LICENSE` for details.

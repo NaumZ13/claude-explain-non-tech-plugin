@@ -6,6 +6,7 @@
     "name": "NaumZ13"
   },
   "repository": "https://github.com/NaumZ13/claude-explain-non-tech-plugin",
+  "license": "MIT",
   "keywords": [
     "communication",
     "documentation",
